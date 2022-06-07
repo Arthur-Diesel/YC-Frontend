@@ -1,17 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Home } from './Pages/Home/Home';
+import { Tshirts } from './Pages/Tshirts/Tshirts';
+import { Hoodies } from './Pages/Hoodies/Hoodies';
+import { Jackets } from './Pages/Jackets/Jackets';
+import { Pants } from './Pages/Pants/Pants'
+import { Accessories } from './Pages/Accessories/Accessories';
+import { IdTest } from './Pages/idTest';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ReactDOM
+  .createRoot(document.getElementById('root'))
+  .render(
+   <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/tshirts" element={<Tshirts />} />
+      <Route path="/tshirts/:id" element={<IdTest />} />
+      <Route path="/hoddies" element={<Hoodies />} />
+      <Route path="/hoddies/:id" element={<IdTest />} />
+      <Route path="/jackets" element={<Jackets />} />
+      <Route path="/jackets/:id" element={<IdTest />} />
+      <Route path="/pants" element={<Pants />} />
+      <Route path="/pants/:id" element={<IdTest />} />
+      <Route path="/accessories" element={<Accessories />} />
+      <Route path="/accessories/:id" element={<IdTest />} />
+    </Routes>
+   </BrowserRouter>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
