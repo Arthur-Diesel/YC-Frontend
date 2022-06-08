@@ -5,7 +5,7 @@ import axios from 'axios';
 import { BigCard } from '../../Components/BigCard/BigCard';
 
 export function Pants(){
-    const baseUrl = "http://localhost:8080"
+    const baseUrl = process.env.REACT_APP_BACKEND_URL
     const [data, setData] = useState({})
 
     useEffect(() => {
