@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -15,4 +15,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "youngc-frontend" #Must be unique in Heroku
           heroku_email: "arthurdiesel@outlook.com"
-          remote_branch: "main"
+          remote_branch: "master"
