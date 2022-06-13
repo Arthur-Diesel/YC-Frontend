@@ -12,7 +12,9 @@ import { Hoodies } from './Pages/Hoodies/Hoodies';
 import { Jackets } from './Pages/Jackets/Jackets';
 import { Pants } from './Pages/Pants/Pants'
 import { Accessories } from './Pages/Accessories/Accessories';
-import { IdTest } from './Pages/idTest';
+import { Login } from './Pages/Login/Login';
+import { Register } from './Pages/Register/Register';
+import { AboutMe } from './Pages/AboutMe/AboutMe'
 
 ReactDOM
   .createRoot(document.getElementById('root'))
@@ -20,16 +22,20 @@ ReactDOM
    <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/aboutme/:id" element={<AboutMe />} />
+      {/* <Route path="/orders/:id" element={<Orders />} /> */}
       <Route path="/tshirts" element={<Tshirts />} />
-      <Route path="/tshirts/:id" element={<IdTest />} />
+      {/*  <Route path="/tshirts/:id" element={< />} /> */}
       <Route path="/hoddies" element={<Hoodies />} />
-      <Route path="/hoddies/:id" element={<IdTest />} />
+      {/* <Route path="/hoddies/:id" element={< />} /> */}
       <Route path="/jackets" element={<Jackets />} />
-      <Route path="/jackets/:id" element={<IdTest />} />
+      {/* <Route path="/jackets/:id" element={< />} /> */}
       <Route path="/pants" element={<Pants />} />
-      <Route path="/pants/:id" element={<IdTest />} />
+      {/* <Route path="/pants/:id" element={< />} /> */}
       <Route path="/accessories" element={<Accessories />} />
-      <Route path="/accessories/:id" element={<IdTest />} />
+      {/* <Route path="/accessories/:id" element={< />} /> */}
     </Routes>
    </BrowserRouter>
 );
