@@ -15,6 +15,7 @@ import { Accessories } from './Pages/Accessories/Accessories';
 import { Login } from './Pages/Login/Login';
 import { Register } from './Pages/Register/Register';
 import { AboutMe } from './Pages/AboutMe/AboutMe'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 ReactDOM
   .createRoot(document.getElementById('root'))
